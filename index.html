@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduLingua</title>
+    <script>
+        // Questo codice rileva la lingua del browser dell'utente
+        const userLang = navigator.language || navigator.userLanguage; 
+        
+        if (userLang.startsWith('fr')) {
+            window.location.href = "index-fr.html"; // Se è francese, vai al sito in francese
+        } else if (userLang.startsWith('it')) {
+            window.location.href = "index-it.html"; // Se è italiano, vai al sito in italiano
+        } else {
+            window.location.href = "index-en.html"; // Per tutti gli altri (inglese e resto del mondo)
+        }
+    </script>
+</head>
+<body>
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLingua - Cours de Langues</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EduLingua</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#chi-sono">À Propos</a></li>
+            <li><a href="#lezioni">Cours</a></li>
+            <li><a href="#prezzi">Tarifs & Horaires</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="index-it.html">IT</a> | 
+            <a href="index-en.html">EN</a> | 
+            <span class="active-lang">FR</span>
+        </div>
+    </nav>
+
+    <section id="home" class="section hero-section">
+        <h1>Osez enfin parler.<br>Apprenez de manière naturelle.</h1>
+        <p>Cours particuliers, conversation et préparation aux examens sur mesure en anglais, français et italien.</p>
+        <a href="#prezzi" class="btn">Réserver mon cours</a>
+    </section>
+
+    <section id="chi-sono" class="section">
+        <div class="container">
+            <h2>À Propos</h2>
+            <p class="subtitle">Mon expérience à votre service</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Des Années d'Expérience</h3>
+                    <p>J'accompagne depuis toujours des élèves de tous âges pour surmonter leurs difficultés linguistiques, avec une méthode empathique, patiente et personnalisée.</p>
+                </div>
+                <div class="about-card highlight">
+                    <h3>4 Ans à Paris</h3>
+                    <p>Vivre à Paris me permet de vous transmettre un français authentique : non seulement la grammaire des livres, mais la langue fluide parlée au quotidien dans les cafés et au travail.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Certifications</h3>
+                    <p>Diplômé(e) et certifié(e) officiellement en anglais et en français, je connais parfaitement les exigences pour vous aider à réussir vos examens et concours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lezioni" class="section bg-light">
+        <div class="container">
+            <h2>Mes Cours</h2>
+            <p class="subtitle">Choisissez la formule qui vous convient</p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="icon">🇬🇧</div>
+                    <h3>Anglais pour Italiens</h3>
+                    <p>Soutien scolaire, rattrapage, conversation pour adultes et préparation aux certifications. Débloquons ensemble votre expression orale.</p>
+                    <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇫🇷</div>
+                    <h3>Français pour Italiens</h3>
+                    <p>Des bases de l'alphabet à la fluidité quotidienne. Un focus ciblé sur la prononciation et la compréhension pour vous donner confiance dès le premier jour.</p>
+                    <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇮🇹</div>
+                    <h3>Italien pour Étrangers</h3>
+                    <p>Cours dédiés aux étudiants ou professionnels anglophones et francophones souhaitant apprendre l'italien de zéro ou perfectionner leur pratique.</p>
+                    <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prezzi" class="section">
+        <div class="container">
+            <h2>Tarifs & Disponibilités</h2>
+            <p class="subtitle">Transparence totale, aucun frais caché</p>
+            
+            <div class="pricing-container">
+                <div class="price-table">
+                    <div class="price-row">
+                        <span>Cours Particulier (1 Heure)</span>
+                        <strong>20 € / h</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>Forfait 5 Cours</span>
+                        <strong>90 € au total</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>Forfait 10 Cours + 1 Offert</span>
+                        <strong>170 € au total</strong>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>📅 Horaires & Modalités</h3>
+                    <p>Les cours ont lieu en ligne (Skype/Zoom) ou en présentiel du <strong>Lundi au Samedi</strong>, avec des horaires flexibles à convenir ensemble selon vos besoins.</p>
+                    <p class="cta-text">Vous souhaitez réserver votre créneau ou faire un premier échange ?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Contactez-moi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Rileva la sezione quando si trova a circa metà dello schermo
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

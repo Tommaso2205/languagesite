@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLingua - Language Tutoring</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EduLingua</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#chi-sono">About Me</a></li>
+            <li><a href="#lezioni">Lessons</a></li>
+            <li><a href="#prezzi">Prices & Schedule</a></li>
+        </ul>
+        <div class="lang-switch">
+            <a href="index-it.html">IT</a> | 
+            <span class="active-lang">EN</span> | 
+            <a href="index-fr.html">FR</a>
+        </div>
+    </nav>
+
+    <section id="home" class="section hero-section">
+        <h1>Let go of the fear of speaking.<br>Learn naturally.</h1>
+        <p>Tailored tutoring, conversation, and exam preparation for English, French, and Italian.</p>
+        <a href="#prezzi" class="btn">Book my lesson</a>
+    </section>
+
+    <section id="chi-sono" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p class="subtitle">My experience at your service</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Years of Experience</h3>
+                    <p>I have always helped students of all ages overcome their difficulties with languages, using an empathetic, patient, and personalized approach.</p>
+                </div>
+                <div class="about-card highlight">
+                    <h3>4 Years in Paris</h3>
+                    <p>Living in Paris allows me to bring you real French: not just textbook grammar, but the fluid and authentic language spoken every day in cafés and at work.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Certifications</h3>
+                    <p>I hold official certifications for both English and French. I know the rules of the game perfectly to help you pass school exams and tests.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lezioni" class="section bg-light">
+        <div class="container">
+            <h2>My Lessons</h2>
+            <p class="subtitle">Choose the path that fits your needs</p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="icon">🇬🇧</div>
+                    <h3>English </h3>
+                    <p>School tutoring, exam recovery, adult conversation, and certification prep. Together, we will break the speaking barrier.</p>
+                    <a href="#prezzi" class="btn-secondary">Start learning</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇫🇷</div>
+                    <h3>French </h3>
+                    <p>From the basics of the alphabet to daily fluency. A targeted focus on pronunciation and comprehension to make you feel confident from day one.</p>
+                    <a href="#prezzi" class="btn-secondary">Start learning</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇮🇹</div>
+                    <h3>Italian </h3>
+                    <p>Courses dedicated to English or French-speaking students and professionals who want to learn Italian from scratch or improve their conversation skills.</p>
+                    <a href="#prezzi" class="btn-secondary">Start learning</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prezzi" class="section">
+        <div class="container">
+            <h2>Prices & Availability</h2>
+            <p class="subtitle">Total transparency, no hidden fees</p>
+            
+            <div class="pricing-container">
+                <div class="price-table">
+                    <div class="price-row">
+                        <span>Single Lesson (1 Hour)</span>
+                        <strong>€20 / h</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>5-Lesson Pack</span>
+                        <strong>€90 total</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>10-Lesson Pack + 1 Free</span>
+                        <strong>€170 total</strong>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>📅 Schedule & Availability</h3>
+                    <p>Lessons take place online (Skype/Zoom) or in person from <strong>Monday to Saturday</strong>, with flexible hours to be arranged together based on your needs.</p>
+                    <p class="cta-text">Want to secure your spot or have a quick introductory chat?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Email Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Rileva la sezione quando si trova a circa metà dello schermo
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

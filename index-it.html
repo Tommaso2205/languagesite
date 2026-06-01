@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduLingua - Ripetizioni di Lingue</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">EduLingua</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#chi-sono">Chi Sono</a></li>
+            <li><a href="#lezioni">Lezioni</a></li>
+            <li><a href="#prezzi">Prezzi & Orari</a></li>
+        </ul>
+        <div class="lang-switch">
+            <span class="active-lang">IT</span> | 
+            <a href="index-en.html">EN</a> | 
+            <a href="index-fr.html">FR</a>
+        </div>
+    </nav>
+
+    <section id="home" class="section hero-section">
+        <h1>Abbandona la paura di parlare.<br>Impara in modo naturale.</h1>
+        <p>Ripetizioni, conversazione e preparazione esami su misura di Inglese, Francese e Italiano.</p>
+        <a href="#prezzi" class="btn">Prenota la mia lezione</a>
+    </section>
+
+    <section id="chi-sono" class="section">
+        <div class="container">
+            <h2>Chi Sono</h2>
+            <p class="subtitle">La mia esperienza al tuo servizio</p>
+            
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>Anni di Esperienza</h3>
+                    <p>Aiuto da sempre studenti di ogni età a superare le proprie difficoltà con le lingue, adottando un metodo empatico, paziente e personalizzato.</p>
+                </div>
+                <div class="about-card highlight">
+                    <h3>4 Anni a Parigi</h3>
+                    <p>Vivere a Parigi mi permette di trasmetterti il francese vero: non solo la grammatica dei libri, ma la lingua fluida e autentica parlata ogni giorno nei caffè e nel lavoro.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Certificazioni</h3>
+                    <p>Ho ottenuto certificazioni ufficiali sia per l'inglese che per il francese. Conosco perfettamente le regole del gioco per aiutarti a superare esami e test scolastici.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lezioni" class="section bg-light">
+        <div class="container">
+            <h2>Le Mie Lezioni</h2>
+            <p class="subtitle">Scegli il percorso adatto a te</p>
+            
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="icon">🇬🇧</div>
+                    <h3>Inglese per Italiani</h3>
+                    <p>Ripetizioni scolastiche, recupero debiti, conversazione per adulti e preparazione alle certificazioni. Abbattiamo insieme il blocco del parlato.</p>
+                    <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇫🇷</div>
+                    <h3>Francese per Italiani</h3>
+                    <p>Dalle basi dell'alfabeto alla fluidità quotidiana. Focus mirato sulla pronuncia e sulla comprensione, per sentirti sicuro fin da subito.</p>
+                    <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
+                </div>
+                <div class="service-box">
+                    <div class="icon">🇮🇹</div>
+                    <h3>Italiano per Stranieri</h3>
+                    <p>Corsi dedicati a studenti o professionisti anglofoni e francesi che vogliono imparare l'italiano da zero o migliorare la conversazione.</p>
+                    <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prezzi" class="section">
+        <div class="container">
+            <h2>Prezzi & Disponibilità</h2>
+            <p class="subtitle">Trasparenza totale, nessun costo nascosto</p>
+            
+            <div class="pricing-container">
+                <div class="price-table">
+                    <div class="price-row">
+                        <span>Lezione Singola (1 Ora)</span>
+                        <strong>€20 / h</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>Pacchetto 5 Lezioni</span>
+                        <strong>€90 totali</strong>
+                    </div>
+                    <div class="price-row">
+                        <span>Pacchetto 10 Lezioni + 1 Gratis</span>
+                        <strong>€170 totali</strong>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>📅 Orari & Disponibilità</h3>
+                    <p>Le lezioni si svolgono online (Skype/Zoom) o in presenza dal <strong>Lunedì al Sabato</strong>, in orari flessibili da concordare insieme in base alle tue esigenze.</p>
+                    <p class="cta-text">Vuoi bloccare il tuo orario o fare una chiacchierata conoscitiva?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Email Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+<script>
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // Rileva la sezione quando si trova a circa metà dello schermo
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
