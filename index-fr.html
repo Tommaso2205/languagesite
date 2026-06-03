@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduLingua - Cours de Langues</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -60,19 +60,19 @@
             <div class="services-grid">
                 <div class="service-box">
                     <div class="icon">🇬🇧</div>
-                    <h3>Anglais </h3>
+                    <h3>Anglais</h3>
                     <p>Soutien scolaire, rattrapage, conversation pour adultes et préparation aux certifications. Débloquons ensemble votre expression orale.</p>
                     <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇫🇷</div>
-                    <h3>Français </h3>
+                    <h3>Français</h3>
                     <p>Des bases de l'alphabet à la fluidité quotidienne. Un focus ciblé sur la prononciation et la compréhension pour vous donner confiance dès le premier jour.</p>
                     <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇮🇹</div>
-                    <h3>Italien </h3>
+                    <h3>Italien</h3>
                     <p>Cours dédiés aux étudiants ou professionnels anglophones et francophones souhaitant apprendre l'italien de zéro ou perfectionner leur pratique.</p>
                     <a href="#prezzi" class="btn-secondary">Commencer à apprendre</a>
                 </div>
@@ -103,15 +103,25 @@
                 
                 <div class="info-box">
                     <h3>📅 Horaires & Modalités</h3>
-                    <p>Les cours ont lieu en ligne (Skype/Zoom) ou en présentiel du <strong>Lundi au Samedi</strong>, avec des horaires flexibles à convenir ensemble selon vos besoins.</p>
-                    <p class="cta-text">Vous souhaitez réserver votre créneau ou faire un premier échange ?</p>
-                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Contactez-moi</a>
+                    <p>Les cours ont lieu en ligne (Zoom) du <strong>Lundi au Samedi</strong>, avec des horaires flexibles. Choisissez le créneau qui vous convient le mieux dans le calendrier ci-dessous.</p>
+                    <p class="cta-text">Vous souhaitez poser une question ou vous avez des besoins particuliers ?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Contactez-moi par e-mail</a>
                 </div>
             </div>
         </div>
     </section>
-<script>
-        const sections = document.querySelectorAll('.section');
+
+    <section id="calendly-section" class="section bg-light" style="padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <h2>Choisissez votre Créneau</h2>
+            <p class="subtitle" style="margin-bottom: 30px;">Réservez directement votre cours depuis le calendrier</p>
+            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/IL_TUO_LINK_CALENDLY" style="min-width:320px; height:700px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+    </section>
+    <script>
+        const sections = document.querySelectorAll('.section, #calendly-section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
@@ -119,7 +129,6 @@
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                // Rileva la sezione quando si trova a circa metà dello schermo
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }

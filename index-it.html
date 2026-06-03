@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduLingua - Ripetizioni di Lingue</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -60,19 +60,19 @@
             <div class="services-grid">
                 <div class="service-box">
                     <div class="icon">🇬🇧</div>
-                    <h3>Inglese </h3>
+                    <h3>Inglese</h3>
                     <p>Ripetizioni scolastiche, recupero debiti, conversazione per adulti e preparazione alle certificazioni. Abbattiamo insieme il blocco del parlato.</p>
                     <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇫🇷</div>
-                    <h3>Francese </h3>
+                    <h3>Francese</h3>
                     <p>Dalle basi dell'alfabeto alla fluidità quotidiana. Focus mirato sulla pronuncia e sulla comprensione, per sentirti sicuro fin da subito.</p>
                     <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇮🇹</div>
-                    <h3>Italiano </h3>
+                    <h3>Italiano</h3>
                     <p>Corsi dedicati a studenti o professionisti anglofoni e francesi che vogliono imparare l'italiano da zero o migliorare la conversazione.</p>
                     <a href="#prezzi" class="btn-secondary">Inizia a imparare</a>
                 </div>
@@ -103,15 +103,25 @@
                 
                 <div class="info-box">
                     <h3>📅 Orari & Disponibilità</h3>
-                    <p>Le lezioni si svolgono online (Skype/Zoom) o in presenza dal <strong>Lunedì al Sabato</strong>, in orari flessibili da concordare insieme in base alle tue esigenze.</p>
-                    <p class="cta-text">Vuoi bloccare il tuo orario o fare una chiacchierata conoscitiva?</p>
-                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Email Me</a>
+                    <p>Le lezioni si svolgono online (Zoom) dal <strong>Lunedì al Sabato</strong>, in orari flessibili. Seleziona lo slot che preferisci dal calendario qui sotto.</p>
+                    <p class="cta-text">Hai domande particolari o esigenze diverse?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Invia un'email per info</a>
                 </div>
             </div>
         </div>
     </section>
-<script>
-        const sections = document.querySelectorAll('.section');
+
+    <section id="calendly-section" class="section bg-light" style="padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <h2>Scegli il tuo Orario</h2>
+            <p class="subtitle" style="margin-bottom: 30px;">Prenota direttamente lo slot per la tua lezione</p>
+            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/IL_TUO_LINK_CALENDLY" style="min-width:320px; height:700px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+    </section>
+    <script>
+        const sections = document.querySelectorAll('.section, #calendly-section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
@@ -119,7 +129,6 @@
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                // Rileva la sezione quando si trova a circa metà dello schermo
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }

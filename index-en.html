@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduLingua - Language Tutoring</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -60,19 +60,19 @@
             <div class="services-grid">
                 <div class="service-box">
                     <div class="icon">🇬🇧</div>
-                    <h3>English </h3>
+                    <h3>English</h3>
                     <p>School tutoring, exam recovery, adult conversation, and certification prep. Together, we will break the speaking barrier.</p>
                     <a href="#prezzi" class="btn-secondary">Start learning</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇫🇷</div>
-                    <h3>French </h3>
+                    <h3>French</h3>
                     <p>From the basics of the alphabet to daily fluency. A targeted focus on pronunciation and comprehension to make you feel confident from day one.</p>
                     <a href="#prezzi" class="btn-secondary">Start learning</a>
                 </div>
                 <div class="service-box">
                     <div class="icon">🇮🇹</div>
-                    <h3>Italian </h3>
+                    <h3>Italian</h3>
                     <p>Courses dedicated to English or French-speaking students and professionals who want to learn Italian from scratch or improve their conversation skills.</p>
                     <a href="#prezzi" class="btn-secondary">Start learning</a>
                 </div>
@@ -103,16 +103,25 @@
                 
                 <div class="info-box">
                     <h3>📅 Schedule & Availability</h3>
-                    <p>Lessons take place online (Skype/Zoom) or in person from <strong>Monday to Saturday</strong>, with flexible hours to be arranged together based on your needs.</p>
-                    <p class="cta-text">Want to secure your spot or have a quick introductory chat?</p>
-                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Email Me</a>
+                    <p>Lessons take place online (Zoom) from <strong>Monday to Saturday</strong>, with flexible hours. Select your preferred slot from the calendar below.</p>
+                    <p class="cta-text">Have specific questions or different needs?</p>
+                    <a href="mailto:tgalimberti732@gmail.com" class="btn">Email Me for info</a>
                 </div>
             </div>
         </div>
     </section>
 
-<script>
-        const sections = document.querySelectorAll('.section');
+    <section id="calendly-section" class="section bg-light" style="padding: 40px 0;">
+        <div class="container" style="text-align: center;">
+            <h2>Choose Your Time Slot</h2>
+            <p class="subtitle" style="margin-bottom: 30px;">Book your lesson slot directly from the calendar</p>
+            
+            <div class="calendly-inline-widget" data-url="https://calendly.com/IL_TUO_LINK_CALENDLY" style="min-width:320px; height:700px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+    </section>
+    <script>
+        const sections = document.querySelectorAll('.section, #calendly-section');
         const navLinks = document.querySelectorAll('.nav-links a');
 
         window.addEventListener('scroll', () => {
@@ -120,7 +129,6 @@
             
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                // Rileva la sezione quando si trova a circa metà dello schermo
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
